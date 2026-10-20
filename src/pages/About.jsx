@@ -43,16 +43,17 @@ function About() {
       <section className="mx-auto grid max-w-7xl gap-12 px-5 py-20 md:grid-cols-2 md:items-center md:py-28 lg:px-8">
         <div>
           <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#5E7848]">
-            Our purpose
+            Solar energy
           </p>
           <h2 className="mt-4 text-3xl font-bold tracking-tight text-[#173B35] md:text-4xl">
-            Good energy decisions start with good information.
+            Turn sunlight into power for everyday life.
           </h2>
           <p className="mt-5 leading-8 text-slate-600">
-            Moving toward renewable energy can bring up important questions
-            about a site, its needs, and the right project path. Our role is to
-            help you explore those questions, understand the options, and
-            approach the next step with a clear plan.
+            Solar panels capture sunlight and convert it into electricity for
+            homes and businesses. With a system planned around your roof,
+            energy use, and goals, solar can help you make more of your own
+            clean power. Sunora helps you understand the options—from rooftop
+            panels to battery storage—and plan a suitable next step.
           </p>
           <Link
             to="/services"
@@ -63,8 +64,8 @@ function About() {
           </Link>
         </div>
         <img
-          src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?auto=format&fit=crop&w=1200&q=80"
-          alt="Solar panels in a renewable energy landscape"
+          src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=85"
+          alt="Solar panels installed across a rooftop"
           loading="lazy"
           decoding="async"
           className="aspect-[4/3] w-full rounded-2xl object-cover shadow-lg"
@@ -79,14 +80,18 @@ function About() {
             {values.map(({ icon: Icon, title, description }) => (
               <article
                 key={title}
-                className="rounded-2xl border border-slate-200 bg-white p-7"
+                className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-7 transition-all duration-300 hover:-translate-y-2 hover:border-[#5E7848]/50 hover:shadow-[0_20px_50px_-24px_rgba(23,59,53,0.3)] motion-reduce:transform-none motion-reduce:transition-none"
               >
+                <span
+                  aria-hidden="true"
+                  className="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-gradient-to-r from-[#5E7848] to-[#D6E5B5] transition-transform duration-300 group-hover:scale-x-100"
+                />
                 <Icon
                   size={27}
-                  className="text-[#5E7848]"
+                  className="text-[#5E7848] transition-transform duration-300 group-hover:scale-110 motion-reduce:transform-none motion-reduce:transition-none"
                   aria-hidden="true"
                 />
-                <h3 className="mt-5 text-xl font-bold text-[#173B35]">
+                <h3 className="mt-5 text-xl font-bold text-[#173B35] transition-colors duration-300 group-hover:text-[#5E7848]">
                   {title}
                 </h3>
                 <p className="mt-3 leading-7 text-slate-600">{description}</p>
