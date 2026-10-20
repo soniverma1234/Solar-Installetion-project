@@ -25,19 +25,53 @@ const values = [
 function About() {
   return (
     <main>
-      <section className="bg-[#173B35] px-5 py-20 text-white md:py-28">
-        <div className="mx-auto max-w-7xl">
-          <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#D6E5B5]">
-            About Sunora
-          </p>
-          <h1 className="mt-5 max-w-4xl text-4xl font-bold tracking-tight md:text-6xl">
-            Helping make the move to clean energy feel clearer.
-          </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-white/75">
-            Sunora Clean Energy helps homeowners and businesses understand
-            renewable energy opportunities and take informed steps toward
-            their project goals.
-          </p>
+      <section className="overflow-hidden bg-[#F7F8F4]">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-14 md:grid-cols-[1.05fr_0.95fr] md:gap-14 md:py-20 lg:px-8">
+          <div className="max-w-2xl">
+            <p className="inline-flex items-center gap-2 rounded-full border border-[#E7D8B5] bg-white px-4 py-2 text-sm font-bold uppercase tracking-[0.14em] text-[#806329]">
+              <span
+                aria-hidden="true"
+                className="h-2 w-2 rounded-full bg-[#C49A45]"
+              />
+              About Sunora
+            </p>
+            <h1 className="mt-6 text-4xl font-bold leading-[1.08] tracking-tight text-[#173B35] md:text-6xl">
+              Helping make clean energy feel{" "}
+              <span className="text-[#A77D2F]">clearer.</span>
+            </h1>
+            <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
+              Sunora Clean Energy helps homeowners and businesses understand
+              solar opportunities and take informed steps toward their energy
+              goals.
+            </p>
+            <Link
+              to="/services"
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#173B35] px-6 py-3.5 font-semibold text-white transition hover:bg-[#24564B]"
+            >
+              Explore solar solutions
+              <ArrowUpRight size={18} aria-hidden="true" />
+            </Link>
+          </div>
+          <div className="relative">
+            <div
+              aria-hidden="true"
+              className="absolute -right-8 -top-8 h-40 w-40 rounded-full bg-[#E7D8B5]/60 blur-2xl"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1400&q=85"
+              alt="Solar panels collecting sunlight on a rooftop"
+              fetchPriority="high"
+              className="relative aspect-[4/3] w-full rounded-[2rem] object-cover shadow-[0_24px_60px_-28px_rgba(23,59,53,0.45)]"
+            />
+            <div className="absolute -bottom-4 left-4 rounded-2xl border border-white/70 bg-white/95 px-5 py-4 shadow-lg backdrop-blur sm:bottom-5 sm:left-5">
+              <p className="text-sm font-semibold text-slate-500">
+                A brighter energy future
+              </p>
+              <p className="mt-1 text-lg font-bold text-[#173B35]">
+                Starts with the sun.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
       <section className="mx-auto grid max-w-7xl gap-12 px-5 py-20 md:grid-cols-2 md:items-center md:py-28 lg:px-8">
